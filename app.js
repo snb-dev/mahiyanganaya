@@ -142,8 +142,8 @@ const renderDirectory = () => {
 };
 
 const setupNavigation = () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const menu = document.querySelector("#nav-menu");
+  let toggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector("#nav-menu") || document.querySelector(".nav-menu.detail-menu");
   const header = document.querySelector(".site-header");
 
   const updateHeader = () => {
@@ -153,17 +153,31 @@ const setupNavigation = () => {
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
 
-  if (!toggle || !menu) return;
+  if (!menu) return;
+
+  if (!menu.id) menu.id = "nav-menu";
+
+  if (!toggle) {
+    toggle = createElement("button", "nav-toggle", "Menu");
+    toggle.type = "button";
+    toggle.setAttribute("aria-label", "Open navigation");
+    menu.before(toggle);
+  }
+
+  toggle.setAttribute("aria-controls", menu.id);
+  toggle.setAttribute("aria-expanded", "false");
 
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
 
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       menu.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
     });
   });
 };
