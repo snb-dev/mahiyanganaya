@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page not found | Mahiyanganaya Travel Guide</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="styles.css">
+    <script>!function(){var t=localStorage.getItem("site-theme"),d=window.matchMedia("(prefers-color-scheme:dark)").matches;if(t==="dark"||(t===null&&d))document.documentElement.dataset.theme="dark"}();</script>
+    <style>
+      .not-found {
+        min-height: 78vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 4rem 1rem;
+      }
+
+      .not-found-inner {
+        max-width: 560px;
+      }
+
+      .not-found-code {
+        margin: 0 0 0.5rem;
+        font-size: clamp(5rem, 20vw, 10rem);
+        line-height: 1;
+        font-weight: 900;
+        color: var(--sand);
+        letter-spacing: -0.04em;
+      }
+
+      .not-found h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+        line-height: 1.15;
+      }
+
+      .not-found p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin: 0 0 2rem;
+      }
+
+      .not-found-links {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: center;
+      }
+
+      .not-found-links a {
+        color: var(--river);
+        font-weight: 900;
+        text-decoration: none;
+        font-size: 0.92rem;
+        padding: 0.4rem 0;
+        border-bottom: 2px solid transparent;
+        transition: border-color 220ms;
+      }
+
+      .not-found-links a:hover {
+        border-color: var(--river);
+      }
+
+      .not-found-links span {
+        color: var(--line);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Mahiyanganaya home">
+          <img class="brand-logo" src="public/logo.png" alt="Mahiyanganaya Travel Guide logo">
+          <span>
+            <strong>Mahiyanganaya</strong>
+            <small>Travel Guide</small>
+          </span>
+        </a>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">Dark</button>
+        </div>
+        <div class="nav-menu detail-menu">
+          <a href="index.html#attractions">Attractions</a>
+          <a href="index.html#plan">Plan</a>
+          <a href="index.html#directory">Directory</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="not-found">
+        <div class="not-found-inner">
+          <p class="not-found-code">404</p>
+          <p class="eyebrow">Page not found</p>
+          <h1>This page doesn't exist</h1>
+          <p>The page you were looking for may have moved or the link may be incorrect. Try heading back to the guide.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="button button-primary" href="index.html">Back to home</a>
+            <a class="button button-dark" href="index.html#attractions">View attractions</a>
+          </div>
+          <nav class="not-found-links" aria-label="Quick links">
+            <a href="attractions/mahiyangana-raja-maha-viharaya.html">Raja Maha Viharaya</a>
+            <span>·</span>
+            <a href="attractions/sorabora-wewa.html">Sorabora Wewa</a>
+            <span>·</span>
+            <a href="attractions/dambana-vedda-village.html">Dambana</a>
+            <span>·</span>
+            <a href="attractions/rathna-ella-falls.html">Rathna Ella Falls</a>
+            <span>·</span>
+            <a href="index.html#plan">Plan a trip</a>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bottom" style="width:min(1160px,calc(100% - 32px));margin:0 auto;padding:1.4rem 0">
+        <p>&copy; 2026 Mahiyanganaya Travel Guide.</p>
+        <a href="index.html">Back to home</a>
+      </div>
+    </footer>
+  </body>
+</html>

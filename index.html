@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mahiyanganaya Travel Guide | Sacred Heritage, Lakes and Local Culture</title>
+    <meta
+      name="description"
+      content="Plan a visit to Mahiyanganaya with attractions, itineraries, local services, travel tips and responsible tourism guidance."
+    >
+    <meta property="og:title" content="Mahiyanganaya Travel Guide">
+    <meta
+      property="og:description"
+      content="Discover Mahiyanganaya Raja Maha Viharaya, Sorabora Wewa, Dambana and the cultural landscapes of Uva Province."
+    >
+    <meta
+      property="og:image"
+      content="https://commons.wikimedia.org/wiki/Special:FilePath/Sorabora%20wewa-Mahiyanganaya-Sri%20Lanka.jpg"
+    >
+    <meta property="og:type" content="website">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2f6f59">
+    <link rel="preconnect" href="https://commons.wikimedia.org">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>!function(){var t=localStorage.getItem("site-theme"),d=window.matchMedia("(prefers-color-scheme:dark)").matches;if(t==="dark"||(t===null&&d))document.documentElement.dataset.theme="dark"}();</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        "name": "Mahiyanganaya",
+        "description": "A Sri Lankan destination in Uva Province known for Buddhist heritage, Sorabora Wewa, Dambana and nature experiences near the Mahaweli River.",
+        "touristType": ["Cultural travelers", "Pilgrims", "Nature travelers", "Local weekend visitors"],
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Uva Province, Sri Lanka"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Mahiyanganaya home">
+          <img class="brand-logo" src="public/logo.png" alt="Mahiyanganaya Travel Guide logo">
+          <span>
+            <strong>Mahiyanganaya</strong>
+            <small>Travel Guide</small>
+          </span>
+        </a>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">Dark</button>
+          <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language / භාෂාව මාරු කරන්න">සිං</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n="nav.toggle">
+          Menu
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#attractions" data-i18n="nav.attractions">Attractions</a>
+          <a href="#plan" data-i18n="nav.plan">Plan</a>
+          <a href="#directory" data-i18n="nav.directory">Directory</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a class="nav-cta" href="#contact" data-i18n="nav.cta">List your business</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="Sorabora Wewa landscape near Mahiyanganaya"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Uva Province, Sri Lanka</p>
+          <h1 id="hero-title">Mahiyanganaya</h1>
+          <p class="hero-copy" data-i18n="hero.body">
+            Sacred Buddhist heritage, quiet reservoir landscapes, indigenous culture and local life in one practical visitor guide.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#attractions" data-i18n="hero.cta1">Explore attractions</a>
+            <a class="button button-secondary" href="#plan" data-i18n="hero.cta2">Plan a trip</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-panel" aria-label="Trip highlights">
+        <div>
+          <span class="stat-label" data-i18n="stat.label1">Best for</span>
+          <strong data-i18n="stat.val1">Pilgrimage, nature, culture</strong>
+        </div>
+        <div>
+          <span class="stat-label" data-i18n="stat.label2">Core circuit</span>
+          <strong data-i18n="stat.val2">Temple, lake, Dambana</strong>
+        </div>
+        <div>
+          <span class="stat-label" data-i18n="stat.label3">Suggested stay</span>
+          <strong data-i18n="stat.val3">1 to 2 days</strong>
+        </div>
+        <div>
+          <span class="stat-label" data-i18n="stat.label4">Best time</span>
+          <strong data-i18n="stat.val4">Dec – Apr (dry season)</strong>
+        </div>
+      </section>
+
+      <section class="section intro-section" aria-labelledby="intro-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="intro.eyebrow">Start here</p>
+          <h2 id="intro-title" data-i18n="intro.h2">A visitor-first guide, not a brochure</h2>
+        </div>
+        <div class="intro-grid">
+          <p>
+            This portal turns Mahiyanganaya's heritage, local services and travel planning details into a clear path for visitors:
+            what to see, how to combine stops, where to find help and how to travel respectfully.
+          </p>
+          <div class="feature-strip" id="feature-strip"></div>
+        </div>
+      </section>
+
+      <section class="section image-band" aria-labelledby="attractions-title" id="attractions">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="attr.eyebrow">Top attractions</p>
+          <h2 id="attractions-title" data-i18n="attr.h2">The essential Mahiyanganaya circuit</h2>
+          <p>
+            A compact route can join sacred history, reservoir scenery and community-led cultural experiences in the same trip.
+          </p>
+        </div>
+        <div class="card-grid" id="attraction-grid"></div>
+      </section>
+
+      <section class="section plan-section" aria-labelledby="plan-title" id="plan">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="plan.eyebrow">Plan your trip</p>
+          <h2 id="plan-title" data-i18n="plan.h2">Simple itineraries for first-time visitors</h2>
+        </div>
+        <div class="plan-layout">
+          <div class="tabs" aria-label="Itinerary options">
+            <button class="tab is-active" type="button" data-itinerary="one-day" data-i18n="plan.tab1">1 day</button>
+            <button class="tab" type="button" data-itinerary="two-day" data-i18n="plan.tab2">2 days</button>
+          </div>
+          <div class="itinerary" id="itinerary-panel" aria-live="polite"></div>
+          <aside class="travel-notes" aria-labelledby="travel-notes-title">
+            <h3 id="travel-notes-title" data-i18n="plan.notes">Travel notes</h3>
+            <ul id="travel-notes-list"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section directory-section" aria-labelledby="directory-title" id="directory">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="dir.eyebrow">Local directory</p>
+          <h2 id="directory-title" data-i18n="dir.h2">Services travelers look for first</h2>
+          <p>
+            Listings are reviewed before being featured. Use the contact section to submit your business or experience.
+          </p>
+        </div>
+        <div class="directory-grid" id="directory-grid"></div>
+      </section>
+
+      <section class="section map-section" aria-labelledby="map-title">
+        <div class="map-copy">
+          <p class="eyebrow" data-i18n="map.eyebrow">Orientation</p>
+          <h2 id="map-title" data-i18n="map.h2">Build the trip around three anchors</h2>
+          <p>
+            Start in Mahiyanganaya town, connect the temple and Sorabora Wewa, then add Dambana or a nature extension based on time.
+          </p>
+          <a class="button button-dark" href="https://www.google.com/maps/search/Mahiyanganaya,+Sri+Lanka" target="_blank" rel="noreferrer">
+            Open map
+          </a>
+        </div>
+        <div id="attraction-map" role="region" aria-label="Map of Mahiyanganaya attractions"></div>
+      </section>
+
+      <section class="section about-section" aria-labelledby="about-title" id="about">
+        <div class="about-media" role="img" aria-label="Mahiyangana stupa"></div>
+        <div class="about-copy">
+          <p class="eyebrow" data-i18n="about.eyebrow">About Mahiyanganaya</p>
+          <h2 id="about-title" data-i18n="about.h2">A sacred town with a wider cultural landscape</h2>
+          <p>
+            Mahiyanganaya sits in Sri Lanka's Uva Province near the Mahaweli River and is strongly associated with Buddhist pilgrimage,
+            ancient irrigation heritage and the living culture of nearby Dambana.
+          </p>
+          <p>
+            The site voice should stay practical and respectful: encourage modest dress at temples, local guides for community visits,
+            and care around reservoir edges, wildlife and village life.
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact-section" aria-labelledby="contact-title" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Partner with the guide</p>
+          <h2 id="contact-title" data-i18n="contact.h2">List your business or local experience</h2>
+          <p>
+            Hotels, guesthouses, guides, transport providers, food spots and community experiences can be reviewed for a featured listing.
+          </p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:snb10snb@gmail.com?subject=Mahiyanganaya%20listing%20request">Email a listing request</a>
+            <a class="button button-secondary light" href="https://wa.me/94700000000?text=I%20would%20like%20to%20list%20a%20Mahiyanganaya%20business%20or%20experience." target="_blank" rel="noreferrer">Start WhatsApp inquiry</a>
+          </div>
+        </div>
+        <form class="inquiry-form" action="https://formsubmit.co/1ed9751cc49eded388399dec9ed13d2a" method="POST">
+          <input type="hidden" name="_subject" value="New Mahiyanganaya listing request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          <label>
+            <span data-i18n="form.name-label">Business or experience name</span>
+            <input type="text" name="name" autocomplete="organization" required>
+          </label>
+          <label>
+            <span data-i18n="form.cat-label">Category</span>
+            <select name="category" required>
+              <option value="">Select a category</option>
+              <option value="Accommodation">Accommodation</option>
+              <option value="Food and drink">Food and drink</option>
+              <option value="Transport">Transport</option>
+              <option value="Guide or experience">Guide or experience</option>
+              <option value="Shop or service">Shop or service</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="form.email-label">Email address</span>
+            <input type="email" name="contact" autocomplete="email" required>
+          </label>
+          <label>
+            <span data-i18n="form.desc-label">Short description</span>
+            <textarea name="description" rows="4" required></textarea>
+          </label>
+          <button class="button button-dark" type="submit" data-i18n="form.submit">Send listing request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="footer-logo-link" href="#top" aria-label="Mahiyanganaya Travel Guide home">
+            <img class="footer-logo" src="public/logo.png" alt="Mahiyanganaya Travel Guide logo">
+          </a>
+          <p class="footer-kicker">Mahiyanganaya Travel Guide</p>
+          <p>
+            A practical visitor guide for sacred heritage, reservoir landscapes, local culture and responsible travel around Mahiyanganaya.
+          </p>
+          <div class="social-links" aria-label="Social and contact links">
+            <a class="social-link social-youtube" href="https://www.youtube.com/results?search_query=Mahiyanganaya" target="_blank" rel="noreferrer" aria-label="YouTube">
+              <span>YT</span>
+              YouTube
+            </a>
+            <a class="social-link social-facebook" href="https://www.facebook.com/search/top?q=mahiyanganaya" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <span>f</span>
+              Facebook
+            </a>
+            <a class="social-link social-email" href="mailto:snb10snb@gmail.com?subject=Mahiyanganaya%20Travel%20Guide%20inquiry" aria-label="Email">
+              <span>@</span>
+              Email
+            </a>
+            <a class="social-link social-whatsapp" href="https://wa.me/94700000000?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20Mahiyanganaya%20Travel%20Guide." target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <span>WA</span>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h2 data-i18n="footer.explore">Explore</h2>
+          <a href="#attractions">Attractions</a>
+          <a href="#plan">Plan your trip</a>
+          <a href="#directory">Local directory</a>
+          <a href="#about">About Mahiyanganaya</a>
+        </div>
+
+        <div class="footer-column">
+          <h2 data-i18n="footer.guides">Top Guides</h2>
+          <a href="attractions/mahiyangana-raja-maha-viharaya.html">Raja Maha Viharaya</a>
+          <a href="attractions/sorabora-wewa.html">Sorabora Wewa</a>
+          <a href="attractions/dambana-vedda-village.html">Dambana Vedda Village</a>
+          <a href="attractions/besama-natural-pool.html">Besama Natural Pool</a>
+        </div>
+
+        <div class="footer-column">
+          <h2 data-i18n="footer.contact">Contact</h2>
+          <a href="#contact">List your business</a>
+          <a href="mailto:snb10snb@gmail.com">snb10snb@gmail.com</a>
+          <a href="https://www.google.com/maps/search/Mahiyanganaya,+Sri+Lanka" target="_blank" rel="noreferrer">Mahiyanganaya, Sri Lanka</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mahiyanganaya Travel Guide.</p>
+        <a href="#top" data-i18n="footer.back">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="translations.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script src="scroll-guide.js" defer></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "mahiyanganaya-travel-guide",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "dependencies": {
+    "firebase": "^12.14.0"
+  }
+}

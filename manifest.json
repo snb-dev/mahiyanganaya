@@ -1,0 +1,17 @@
+{
+  "name": "Mahiyanganaya Travel Guide",
+  "short_name": "Mahiyanganaya",
+  "description": "Sacred heritage, reservoir landscapes, indigenous culture and local life in one practical visitor guide.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#2f6f59",
+  "icons": [
+    {
+      "src": "public/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
