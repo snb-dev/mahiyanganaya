@@ -123,12 +123,6 @@ const setupItineraryTabs = () => {
   renderItinerary("one-day");
 };
 
-const renderTravelNotes = () => {
-  const list = document.querySelector("#travel-notes-list");
-  if (!list) return;
-  data.travelNotes.forEach((note) => list.append(createElement("li", "", note)));
-};
-
 const renderDirectory = () => {
   const container = document.querySelector("#directory-grid");
   if (!container) return;
@@ -190,7 +184,6 @@ const setupRevealAnimations = () => {
     ".feature",
     ".attraction-card",
     ".stop",
-    ".travel-notes",
     ".directory-card",
     ".map-copy",
     ".about-media",
@@ -330,7 +323,6 @@ const setupLightbox = () => {
 renderFeatures();
 renderAttractions();
 setupItineraryTabs();
-renderTravelNotes();
 renderDirectory();
 setupNavigation();
 setupRevealAnimations();

@@ -80,10 +80,10 @@ window.siteData = {
     {
       title: "Nagadeepa Viharaya",
       url: "attractions/nagadeepa-viharaya.html",
-      image: "https://visituva.lk/gallery/202509/1758804926_2f42004e68d03b0213b6.jpg",
+      image: "public/nagadipa/nagadeepa-temple-view.webp",
       alt: "Nagadeepa Viharaya temple ruins",
-      copy: "An ancient temple complex in the Badulla District, noted by Uva tourism sources as a quieter heritage site.",
-      tags: ["Temple ruins", "Heritage", "Quiet site"],
+      copy: "A protected ancient temple site at Uraniya in Rideemaliyadda, with stupa ruins, inscriptions and Dutugemunu-era folklore.",
+      tags: ["Protected site", "Stupa ruins", "Inscriptions"],
       lat: 7.2100, lng: 81.1300
     },
     {
@@ -137,14 +137,6 @@ window.siteData = {
       }
     ]
   },
-  travelNotes: [
-    "Confirm road conditions and travel times before publishing final visitor guidance.",
-    "Use verified contacts before naming businesses, guides or transport providers.",
-    "Temple visits should mention modest dress and respectful photography.",
-    "Community visits around Dambana should prioritize local consent, local guides and fair payment.",
-    "Natural pools and waterfalls should be visited in daylight, with extra caution after rain or when water levels rise.",
-    "Reservoir and waterfall routes should be verified locally before sending visitors, especially during monsoon periods."
-  ],
   directory: [
     {
       title: "Accommodation",

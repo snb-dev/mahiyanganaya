@@ -1,4 +1,4 @@
-const CACHE = 'mahiyanganaya-v8';
+const CACHE = 'mahiyanganaya-v12';
 
 const PRECACHE_URLS = [
   './',
@@ -8,6 +8,8 @@ const PRECACHE_URLS = [
   './data.js',
   './translations.js',
   './scroll-guide.js',
+  './robots.txt',
+  './sitemap.xml',
   './404.html',
   './public/logo.png',
   './attractions/mahiyangana-raja-maha-viharaya.html',
@@ -19,6 +21,9 @@ const PRECACHE_URLS = [
   './attractions/ulhitiya-reservoir.html',
   './attractions/nagadeepa-viharaya.html',
   './attractions/rathna-ella-falls.html',
+  './public/3D%20models/Parrot.glb',
+  './public/vendor/three/three.min.js',
+  './public/vendor/three/GLTFLoader.js',
 ];
 
 self.addEventListener('install', (event) => {
@@ -44,22 +49,38 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
+  const isNavigation = request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html');
 
   if (url.origin === self.location.origin) {
-    // Cache-first for same-origin assets
+    if (isNavigation) {
+      event.respondWith(
+        fetch(request)
+          .then((response) => {
+            if (response.ok) {
+              caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
+            }
+            return response;
+          })
+          .catch(() =>
+            caches.match(request)
+              .then((cached) => cached || caches.match('./index.html'))
+              .then((fallback) => fallback || caches.match('./404.html'))
+          )
+      );
+      return;
+    }
+
     event.respondWith(
-      caches.match(request).then((cached) => {
-        const networkFetch = fetch(request).then((response) => {
+      caches.match(request)
+        .then((cached) => cached || fetch(request).then((response) => {
           if (response.ok) {
             caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
           }
           return response;
-        });
-        return cached || networkFetch;
-      })
+        }))
+        .catch(() => caches.match('./404.html'))
     );
   } else {
-    // Network-first with cache fallback for external resources
     event.respondWith(
       fetch(request)
         .then((response) => {
@@ -68,7 +89,7 @@ self.addEventListener('fetch', (event) => {
           }
           return response;
         })
-        .catch(() => caches.match(request))
+        .catch(() => caches.match(request).then((cached) => cached || Response.error()))
     );
   }
 });
