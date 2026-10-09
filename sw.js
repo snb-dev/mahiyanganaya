@@ -1,4 +1,4 @@
-const CACHE = 'mahiyanganaya-v12';
+const CACHE = 'mahiyanganaya-v13';
 
 const PRECACHE_URLS = [
   './',
@@ -21,9 +21,14 @@ const PRECACHE_URLS = [
   './attractions/ulhitiya-reservoir.html',
   './attractions/nagadeepa-viharaya.html',
   './attractions/rathna-ella-falls.html',
-  './public/3D%20models/Parrot.glb',
-  './public/vendor/three/three.min.js',
-  './public/vendor/three/GLTFLoader.js',
+  './public/nagadipa/nagadeepa-temple-view.webp',
+  './public/nagadipa/nagadeepa-stupa-grounds.webp',
+  './public/nagadipa/nagadeepa-heritage-landscape.webp',
+  './public/nagadipa/nagadeepa-temple-architecture.webp',
+  './public/nagadipa/nagadeepa-sacred-site.webp',
+  './public/nagadipa/nagadeepa-temple-detail.webp',
+  // 3D assets (three.min.js ~615KB, GLTFLoader.js ~100KB, Parrot.glb ~97KB) are NOT
+  // precached to avoid blocking SW install. They are cached on-demand after first load.
 ];
 
 self.addEventListener('install', (event) => {
